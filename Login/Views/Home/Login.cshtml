@@ -1,0 +1,20 @@
+﻿@model Login.Models.Log
+
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <form asp-controller="Home" asp-action="Login" method="post">
+        <label>Username</label><input type="text" name="Usename" /><br />
+        <label>Password</label><input type="password" name="Password" /><br />
+        <input type="submit" /> <br />
+        <input type="button" name="btnReg" value="Register" onclick="window.location='http://localhost:1463/home/register'"/>
+    </form>
+    @if (@ViewBag.Message != null)
+    { 
+       <label>@ViewBag.Message</label>
+    }
+</body>
+</html>
